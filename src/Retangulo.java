@@ -32,15 +32,15 @@ public class Retangulo {
         return base;
     }
 
-    public double area() {
+    public double area(double base, double altura) {
         return base * altura;
     }
 
-    public double perimetro() {
+    public double perimetro(double base, double altura) {
         return base * 2 + altura * 2;
     }
 
-    public void gira() {
+    public void gira(double base, double altura) {
         double temp = base;
         base = altura;
         altura = temp;
@@ -58,8 +58,10 @@ public class Retangulo {
 
         double altura = Math.abs(scanner.nextDouble());
 
-        System.out.println(retangulo.esquadria(base, altura));
+        System.out.println("É um quadrado? " + retangulo.esquadria(base, altura));
 
+        System.out.println("Perímetro: " + retangulo.perimetro(base, altura));
+        System.out.println("Área: " + retangulo.area(base, altura));
 
     }
 
